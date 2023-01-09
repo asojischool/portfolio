@@ -1,2 +1,2 @@
-# portfolio
-Andrew Sow's portfolio
+# Portfolio
+Hi I am Andrew Sow. I am aiming to become a professional software developer so that I can deliver top-quality code and help with projects.
