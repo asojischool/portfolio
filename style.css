@@ -1,14 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,500;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rowdies&display=swap");
+
+* {
+	font-family: "DM Sans", sans-serif;
+}
+
 body {
 	font-family: Arial, sans-serif;
 	margin: 0;
 	padding: 0;
 }
 
+.squiggly {
+	width: 80px;
+	margin: 30px 0px;
+	opacity: 0.5;
+}
+
+#background {
+	font-family: "Rowdies", cursive !important;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: white;
+	color: black;
+	font-size: 200px;
+	display: flex;
+	opacity: 0.05;
+	align-items: flex-start;
+	justify-content: center;
+	z-index: -1;
+}
+
+#main-content {
+	z-index: 1;
+}
+
+#about {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+}
+
+.about-intro-name {
+	margin-top: 30px;
+	font-size: larger;
+}
+
+.about-intro {
+	display: flex; /* Use flexbox layout */
+	align-items: center;
+	flex-direction: row;
+	font-size: 25px;
+	margin-bottom: 30px;
+	height: auto;
+}
+
+.about-intro h1 {
+	margin-left: 20px;
+	margin-top: 10px;
+	margin-bottom: 0px;
+}
+
+.about-image {
+	height: 100px;
+	width: auto;
+}
+
+.typewriter-animation {
+	padding-right: 5px;
+	overflow: hidden; /* Hide the text until the animation */
+	white-space: pre; /* Preserve whitespace */
+	border-right: 0.15em solid black; /* The typing cursor */
+	animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+	from {
+		width: 0;
+	}
+	to {
+		width: 100%;
+	}
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+	from,
+	to {
+		border-color: transparent;
+	}
+	50% {
+		border-color: black;
+	}
+}
+
 header {
 	background-color: #333;
 	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	padding: 20px;
-	text-align: center;
 }
 
 header h1 {
@@ -21,29 +118,27 @@ header h2 {
 	font-size: 24px;
 }
 
-nav {
-	background-color: #eee;
+header nav {
 	display: flex;
-	justify-content: space-around;
 }
 
-nav ul {
+header nav ul {
 	list-style: none;
 	margin: 0;
 	padding: 0;
 }
 
-nav li {
+header nav li {
 	display: inline-block;
 	margin: 0 10px;
 }
 
-nav a {
-	color: #333;
+header nav a {
+	color: white;
 	text-decoration: none;
 }
 
-nav a:hover {
+header nav a:hover {
 	color: #777;
 }
 
@@ -62,9 +157,29 @@ section h3 {
 	font-size: 24px;
 }
 
-section h4 {
+section .project {
+	margin: 20px 0;
+}
+
+section .project h4 {
 	margin: 10px 0;
 	font-size: 18px;
+}
+
+.skill-list {
+	list-style-type: none;
+	padding-left: 0;
+	margin: 30px 0;
+}
+
+.skill-name {
+	font-size: small;
+	opacity: 0.6;
+	font-weight: 200;
+}
+
+.skill-description {
+	font-size: large;
 }
 
 footer {
